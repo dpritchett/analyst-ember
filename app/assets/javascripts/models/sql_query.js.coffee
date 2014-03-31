@@ -1,2 +1,2 @@
 class Analyst.SqlQuery extends DS.Model
-  queryString: DS.attr('string')
+  queryString: DS.attr()
