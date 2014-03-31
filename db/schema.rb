@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20140330183010) do
 
   create_table "sql_queries", force: true do |t|
-    t.text     "querystring"
+    t.text     "query_string"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

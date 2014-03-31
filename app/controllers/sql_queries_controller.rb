@@ -1,7 +1,11 @@
+class SqlQuerySerializer < ActiveModel::Serializer
+  attributes :query_string, :id
+end
+
 class SqlQueriesController < ApplicationController
   before_action :load_ivars
   def index
-    render json: { sql_queries: @sql_queries }
+    render json: @sql_queries
   end
 
   def show
@@ -27,6 +31,6 @@ class SqlQueriesController < ApplicationController
   end
 
   def sql_query_params
-    params.permit(:querystring)
+    params.permit(:query_string)
   end
 end
