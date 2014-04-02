@@ -1,7 +1,14 @@
-class Analyst.SqlQueriesRoute extends Ember.Route
+Analyst.SqlQueriesRoute = Ember.Route.extend(
   model: ->
-    @store.find('sql_queries')
+    @store.find('sql_query')
+  setupController: (controller, model) ->
+    @controllerFor('application').set('currentRoute', 'sqlQueries')
+)
 
-class Analyst.SqlQueryRoute extends Ember.Route
-  model: (params) ->
-    @store.find('sql_queries', params.sql_query_id)
+Analyst.SqlQueryRoute = Ember.Route.extend(
+  model: ->
+    @store.find(params.sql_query_id)
+  setupController: (controller, model) ->
+    controller.set('content', model)
+    @controllerFor('application').set('currentRoute', 'sqlQueries')
+)

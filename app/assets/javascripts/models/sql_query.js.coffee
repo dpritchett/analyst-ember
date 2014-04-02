@@ -1,2 +1,3 @@
-class Analyst.SqlQuery extends DS.Model
+Analyst.SqlQuery = DS.Model.extend(
   queryString: DS.attr()
+)

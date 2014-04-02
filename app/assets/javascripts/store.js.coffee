@@ -1,6 +1,7 @@
 # http://emberjs.com/guides/models/using-the-store/
 
-class Analyst.ApplicationAdapter extends DS.ActiveModelAdapter
+Analyst.ApplicationAdapter = DS.ActiveModelAdapter.extend()
 
-class Analyst.Store extends DS.Store
+Analyst.Store = DS.Store.extend(
   adapter: 'Analyst.ApplicationAdapter'
+)

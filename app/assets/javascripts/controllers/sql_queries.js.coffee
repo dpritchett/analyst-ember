@@ -1,1 +1,2 @@
-#class Analyst.SqlQueriesController extends Ember.ArrayController
+class Analyst.SqlQueriesController extends Ember.ArrayController
+  #model: @store.find('sql_query')

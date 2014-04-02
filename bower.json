@@ -10,10 +10,15 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "app/assets/components",
     "test",
     "tests"
   ],
   "dependencies": {
+    "ember-data": "1.0.0-beta.7",
+    "ember": "~1.5.0"
+  },
+  "resolutions": {
     "ember-data": "1.0.0-beta.7",
     "ember": "~1.5.0"
   }
