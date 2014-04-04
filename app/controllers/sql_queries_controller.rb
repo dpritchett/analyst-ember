@@ -13,11 +13,11 @@ class SqlQueriesController < ApplicationController
   end
 
   def create
-    render json: SqlQuery.create!(sql_query_params)
+    render json: SqlQuery.create!(sql_query_params[:sql_query])
   end
 
   def update
-    render json: @sql_query.update!(sql_query_params)
+    render json: @sql_query.update!(sql_query_params[:sql_query])
   end
 
   def destroy
@@ -31,6 +31,6 @@ class SqlQueriesController < ApplicationController
   end
 
   def sql_query_params
-    params.permit(:query_string)
+    params.permit(sql_query: [:query_string])
   end
 end

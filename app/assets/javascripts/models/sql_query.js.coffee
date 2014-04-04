@@ -1,3 +1,2 @@
-Analyst.SqlQuery = DS.Model.extend(
+Analyst.SqlQuery = DS.Model.extend
   queryString: DS.attr()
-)

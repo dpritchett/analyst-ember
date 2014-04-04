@@ -1,0 +1,9 @@
+<h2>SQL Queries!</h2>
+
+<ul>
+  {{#each}}
+  <li>{{#link-to "sqlQuery" this}}[{{id}}] {{queryString}}{{/link-to}}</li>
+  {{else}}
+    <li>Sorry, no items found.</li>
+  {{/each}}
+</ul>
